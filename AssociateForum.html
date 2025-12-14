@@ -186,9 +186,11 @@ Concern:
 ${concern}
 `;
 
+    const subject = `${name} & ${loginId}`;
+
     window.location.href =
       "mailto:puthuvelilabraham@gmail.com" +
-      "?subject=" + encodeURIComponent("MY CONCERN TO ASSOCIATE FORUM") +
+      "?subject=" + encodeURIComponent(subject) +
       "&body=" + encodeURIComponent(body);
 
     return false;
