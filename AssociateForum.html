@@ -6,97 +6,97 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    background:#f4f4f4;
-    padding:24px;
-    margin:0;
-    background-image: url('AF_background_pattern.jpg');
-    background-size: 400px auto;
-    background-repeat: repeat;
-    background-attachment: fixed;
-    background-position: center center;
-  }
+  body {
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    padding:24px;
+    margin:0;
+    background-image: url('AF_background_pattern.jpg');
+    background-size: 400px auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center center;
+  }
 
-  .container {
-    position: relative;
-    max-width: 850px;
-    margin: auto;
-    background: #FFFFFF;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    overflow: hidden;
-  }
+  .container {
+    position: relative;
+    max-width: 850px;
+    margin: auto;
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+  }
 
-  /* WATERMARK */
-  .watermark {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 520px;
-    opacity: 0.06;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 0;
-  }
+  /* WATERMARK */
+  .watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 520px;
+    opacity: 0.06;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 0;
+  }
 
-  .content {
-    position: relative;
-    z-index: 2;
-  }
+  .content {
+    position: relative;
+    z-index: 2;
+  }
 
-  /* HEADER IMAGE */
-  .header {
-    text-align: center;
-    margin-bottom: 25px;
-  }
+  /* HEADER IMAGE */
+  .header {
+    text-align: center;
+    margin-bottom: 25px;
+  }
 
-  .header img {
-    max-width: 100%;
-    height: auto;
-  }
+  .header img {
+    max-width: 100%;
+    height: auto;
+  }
 
-  label {
-    font-weight: bold;
-    margin-top: 14px;
-    display: block;
-  }
+  label {
+    font-weight: bold;
+    margin-top: 14px;
+    display: block;
+  }
 
-  input, select, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 6px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 14px;
-  }
+  input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
 
-  textarea {
-    min-height: 160px;
-  }
+  textarea {
+    min-height: 160px;
+  }
 
-  button {
-    margin-top: 20px;
-    background: #FF9900;
-    color: #000;
-    border: none;
-    padding: 12px 22px;
-    border-radius: 6px;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-  }
+  button {
+    margin-top: 20px;
+    background: #FF9900;
+    color: #000;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+  }
 
-  button:hover {
-    background: #F0A020;
-  }
+  button:hover {
+    background: #F0A020;
+  }
 
-  .note {
-    font-size: 12px;
-    color: #555;
-    margin-top: 12px;
-  }
+  .note {
+    font-size: 12px;
+    color: #555;
+    margin-top: 12px;
+  }
 </style>
 </head>
 
@@ -104,97 +104,96 @@
 
 <div class="container">
 
-  <!-- WATERMARK IMAGE -->
-  <img class="watermark" src="data:image/jpeg;base64,{{AF_BASE64_IMAGE}}" alt="Watermark">
+    <img class="watermark" src="data:image/jpeg;base64,{{AF_BASE64_IMAGE}}" alt="Watermark">
 
-  <div class="content">
+  <div class="content">
 
-    <!-- HEADER IMAGE -->
-    <div class="header">
-      <img src="AF.jpg" alt="Amazon Associate Forum Logo">
-    </div>
+        <div class="header">
+      <img src="AF.jpg" alt="Amazon Associate Forum Logo">
+    </div>
 
-    <form onsubmit="return sendMail(event)">
+    <form onsubmit="return sendMail(event)">
 
-      <label>Name of Associate</label>
-      <input type="text" id="name" required>
+      <label>Name of Associate</label>
+      <input type="text" id="name" required>
 
-      <label>Login ID</label>
-      <input type="text" id="loginId" required>
+      <label>Login ID</label>
+      <input type="text" id="loginId" required>
 
-      <label>Date</label>
-      <input type="date" id="date" required>
+      <label>Date</label>
+      <input type="date" id="date" required>
 
-      <label>Department</label>
-      <select id="dept" required>
-        <option value="">-- Select Department --</option>
-        <option>C-Rets</option>
-        <option>Pack</option>
-        <option>Pick</option>
-        <option>Stow</option>
-        <option>Shipping</option>
-        <option>VNA</option>
-        <option>Others</option>
-      </select>
+      <label>Department</label>
+      <select id="dept" required>
+        <option value="">-- Select Department --</option>
+        <option>C-Rets</option>
+        <option>Pack</option>
+        <option>Pick</option>
+        <option>Stow</option>
+        <option>Shipping</option>
+        <option>VNA</option>
+        <option>Others</option>
+      </select>
 
-      <label>Send Anonymously?</label>
-      <select id="anon">
-        <option>No</option>
-        <option>Yes</option>
-      </select>
+      <label>Send Anonymously?</label>
+      <select id="anon">
+        <option>No</option>
+        <option>Yes</option>
+      </select>
 
-      <label>Concern</label>
-      <textarea id="concern" required></textarea>
+      <label>Concern</label>
+      <textarea id="concern" required></textarea>
 
-      <button type="submit">Submit Concern</button>
+      <button type="submit">Submit Concern</button>
 
-      <p class="note">
-        Concern will be sent privately to <b>puthuvelilabraham@gmail.com</b>
-      </p>
+      <p class="note">
+        Concern will be sent privately to <b>puthuvelilabraham@gmail.com</b>
+      </p>
 
-    </form>
+    </form>
 
-  </div>
+  </div>
 </div>
 
 <script>
-  // Auto-fill current date
-  document.getElementById('date').value =
-    new Date().toISOString().split('T')[0];
+  // Auto-fill current date
+  document.getElementById('date').value =
+    new Date().toISOString().split('T')[0];
 
-  function sendMail(e) {
-    e.preventDefault();
+  function sendMail(e) {
+    e.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const loginId = document.getElementById('loginId').value;
-    const dept = document.getElementById('dept').value;
-    const anon = document.getElementById('anon').value;
-    const concern = document.getElementById('concern').value;
-    const date = document.getElementById('date').value;
+    const name = document.getElementById('name').value;
+    const loginId = document.getElementById('loginId').value;
+    const dept = document.getElementById('dept').value;
+    const anon = document.getElementById('anon').value;
+    const concern = document.getElementById('concern').value;
+    const date = document.getElementById('date').value;
 
-    const displayName = anon === "Yes" ? "Anonymous" : name;
+    const displayName = anon === "Yes" ? "Anonymous" : name;
 
-    const body =
+    const body =
 `Hi Associate Forum,
 
-Name       : ${displayName}
-Login ID   : ${loginId}
+Name       : ${displayName}
+Login ID   : ${loginId}
 Department : ${dept}
-Date       : ${date}
+Date       : ${date}
 
 Concern:
 ${concern}
 `;
+    
+    // UPDATED SUBJECT LINE FORMAT
+    const subject = `Associate Concern: Action Required (Ref: ${loginId}, ${dept}, ${date})`;
 
-    const subject = `Associate Concern: ${loginId}/${dept}`;
+    window.location.href =
+      "mailto:puthuvelilabraham@gmail.com" +
+      "?subject=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(body);
 
-    window.location.href =
-      "mailto:puthuvelilabraham@gmail.com" +
-      "?subject=" + encodeURIComponent(subject) +
-      "&body=" + encodeURIComponent(body);
-
-    return false;
-  }
+    return false;
+  }
 </script>
 
 </body>
